@@ -3,12 +3,12 @@
     box-sizing: border-box;
 }
 
-.flex {
-    display: flex; flex-wrap: wrap;
-}
-
 
 /* HEADER */
+
+header, header div, header nav {
+    display: flex; flex-wrap: wrap;
+}
 
 header {
     background: rosybrown;
@@ -24,7 +24,6 @@ header .img-container img {
 }
 
 header div {
-    background: pink;
     height: 100px;
     flex: 1 1 70vw;
     align-items: center;
@@ -35,7 +34,6 @@ header div h1 {
 }
 
 header nav {
-    background: gainsboro;
     flex: 1 1 100vw;
     justify-content: space-evenly;
     align-items: center;
@@ -44,28 +42,24 @@ header nav {
 
 /* MAIN */
 
-#about {
-    background: skyblue;
-}
-
-#work {
-    background: skyblue;
-}
-
 main {
-    flex-direction: column;
+    display: flex; flex-direction: column;
     gap: 20px;
     margin-bottom: 20px;
 }
 
-.examples article {
-    flex: 1 1 100vw;
-    margin: 2vh 2vw;
+.examples {
+    display: flex; flex-wrap: wrap;
 }
 
-.examples img {
-    height: 100px;
-    width: 100%;
+.examples article {
+    flex: 1 1 100vw;
+    margin: 15px;
+    border: 1px solid black;
+}
+
+.examples article img {
+    width: 100%; height: 100px;
 }
 
 
@@ -81,10 +75,15 @@ main {
     }
     /* header will unwrap so the title and nav are next to each-other */
 
-    .examples article:not(:first-child) {
-        flex: 1 1 350px;
+    .examples article {
+        flex: 1 1 40vw;
     }
-    /* for some reason this declaration makes the #work section excessively tall. no idea why. need to come back to this */
-}
+    
+    .examples article:first-child {
+        flex: 2 1 100vw;
+    }
 
-/* need to make images get taller with increased screen size */
+    .examples article:last-child {
+        flex: 0 1 calc(50% - 30px);
+    }
+}
