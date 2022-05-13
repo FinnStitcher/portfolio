@@ -81,16 +81,10 @@ main {
     }
     /* header will unwrap so the title and nav are next to each-other */
 
-    .examples article {
-        flex-basis: 42vw;
+    .examples article:not(:first-child) {
+        flex: 1 1 350px;
     }
     /* for some reason this declaration makes the #work section excessively tall. no idea why. need to come back to this */
-    /* shows up at exactly 936px */
-
-    .examples article:first-child {
-        flex-basis: 100vw;
-    }
-    /* examples display as a wrapped row with the first item taking up the full width */
 }
 
 /* need to make images get taller with increased screen size */
