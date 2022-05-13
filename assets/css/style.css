@@ -11,60 +11,43 @@
 /* HEADER */
 
 header {
-    justify-content: space-around;
-    align-items: center;
     background: rosybrown;
     margin-bottom: 20px;
 }
 
-header figure {
-    flex: 1 30%;
+header .img-container {
+    flex: 0 0 100px;
 }
 
-figure img {
-    max-width: 100%;
+header .img-container img {
+    width: 100%;
 }
 
-header h1 {
-    flex: 2 70%;
-    padding-left: 5%;
+header div {
+    background: pink;
+    height: 100px;
+    flex: 1 1 70vw;
+    align-items: center;
+}
+
+header div h1 {
+    margin-left: 9vw;
 }
 
 header nav {
-    flex: 3 100%;
+    background: gainsboro;
+    flex: 1 1 100vw;
     justify-content: space-evenly;
     align-items: center;
-    height: 60px;
 }
 
 
-/* FOOTER */
-footer {
-    background: rosybrown;
-}
+@media screen and (min-width: 768px) {
+    header div {
+        flex: 1 1 0;
+    }
 
-
-/* BODY */
-
-main {
-    margin: 10px 5px 30px 5px;
-    gap: 30px;
-}
-
-.examples {
-    justify-content: space-between;
-    gap: 15px;
-}
-
-.examples article {
-    width: 100%;
-}
-
-.examples article img {
-    height: 70px;
-    width: 100%;
-}
-
-.examples .first-example img {
-    height: 140px;
+    header nav {
+        flex: 1 1 0;
+    }
 }
