@@ -1,20 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?&family=Libre+Franklin&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Maven+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Exo&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Montserrat&display=swap');
+
 :root {
     --main-vert-margin: 30px;
-    --primary-color: #76390e;
-    --secondary-color: gainsboro;
+    --primary-color: #a35f22;
+    --secondary-color: #eedccd;
     --tertiary-color: #5fd1e0;
+    --img-height: 100px;
 }
 
 * {
     margin: 0; padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
 }
 
-/* GENERAL */
+body {
+    background: rgb(243, 243, 243);
+}
 
-h2 {
-    color: var(--tertiary-color);
+
+/* FONTS */
+
+h1, h2 {
+    font-family: 'Exo', sans-serif;
+    text-transform: uppercase;
 }
 
 
@@ -51,8 +65,9 @@ header nav {
     align-items: center;
 }
 
-h1, header a {
+header a {
     color: var(--secondary-color);
+    text-decoration: none;
 }
 
 
@@ -61,25 +76,48 @@ h1, header a {
 main {
     display: flex; flex-direction: column;
     gap: 30px;
-    margin: var(--main-vert-margin) 0;
+    margin: var(--main-vert-margin) 0 calc(var(--main-vert-margin) + 10px);
+}
+
+main h2 {
+    display: inline-block;
+    color: var(--tertiary-color);
+    width: 200px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-bottom: 2px solid;
+}
+
+.about p {
+    margin: 0 10px;
 }
 
 .examples {
     display: flex; flex-wrap: wrap;
-    gap: 30px;
+    gap: 30px 40px;
 }
 
 .examples article {
     flex: 1 1 100vw;
-    border: 1px solid black;
 }
 
 .examples article img {
-    width: 100%; height: 100px;
+    width: 100%;
+    height: var(--img-height);
 }
 
 .examples article:first-child img {
-    height: 140px;
+    height: calc(var(--img-height) + 40px);
+}
+
+.examples h4 {
+    width: fit-content; min-width: 30%;
+    border-bottom: 1px solid gray;
+    padding-right: 20px;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+    font-weight: normal;
 }
 
 
@@ -88,6 +126,7 @@ main {
 footer {
     background: var(--primary-color);
     display: flex; flex-wrap: wrap;
+    padding: 10px 0;
 }
 
 footer div {
@@ -97,12 +136,18 @@ footer div {
     height: 40px;
 }
 
-footer div:last-child {
-    justify-content: space-evenly;
+address {
+    font-style: normal;
 }
 
 
 /* MEDIA QUERIES */
+
+@media screen and (min-width: 575px) {
+    main {
+        margin: var(--main-vert-margin) 4vw calc(var(--main-vert-margin) + 10px);
+    }
+}
 
 @media screen and (min-width: 768px) {
     header div {
@@ -119,8 +164,8 @@ footer div:last-child {
     }
     /* header will unwrap so the title and nav are next to each-other */
 
-    main {
-        margin: var(--main-vert-margin) 40px;
+    .about p {
+        margin: 0;
     }
 
     .examples article {
@@ -133,15 +178,35 @@ footer div:last-child {
     /* work examples wrap into two columns */
 
     .examples article:last-child {
-        flex: 0 1 calc(50% - 15px);
+        flex: 0 1 calc(50% - 20px);
     }
-    /* the pixel number here needs to be half the gap */
+    /* the pixel number here needs to be half the horizontal gap */
+
+    footer {
+        gap: 50px;
+    }
     
     footer div {
         flex: 1 1 0vw;
     }
 
+    footer div:first-child {
+        justify-content: flex-end;
+    }
+
     footer div:last-child {
-        flex: 3 1 0vw;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    :root {
+        --img-height: 120px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    :root {
+        --img-height: 140px;
     }
 }
