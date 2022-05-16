@@ -43,14 +43,6 @@ header {
     background: var(--primary-color);
 }
 
-header .img-container {
-    flex: 0 0 100px;
-}
-
-header .img-container img {
-    width: 100%;
-}
-
 header div {
     height: 100px;
     flex: 1 1 70vw;
@@ -89,8 +81,27 @@ main h2 {
     border-bottom: 2px solid;
 }
 
-.about p {
-    margin: 0 10px;
+.about-content {
+    display: flex; flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+.about-content div {
+    flex: 1 1;
+    height: 200px;
+}
+
+.about-content .bio {
+    text-align: center;
+    line-height: 1.4;
+}
+
+.about-content .bio p {
+    margin-bottom: 7px;
+}
+
+.about-content .img-container {
+    display: none;
 }
 
 .examples {
@@ -102,22 +113,35 @@ main h2 {
     flex: 1 1 100vw;
 }
 
-.examples article img {
-    width: 100%;
+.examples article .img-container {
     height: var(--img-height);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 12px;
 }
 
-.examples article:first-child img {
-    height: calc(var(--img-height) + 40px);
+.examples article:first-child .img-container {
+    height: calc(var(--img-height) + 50px);
 }
 
 .examples h4 {
-    width: fit-content; min-width: 30%;
+    width: 300px;
     border-bottom: 1px solid gray;
     padding-right: 20px;
     padding-bottom: 3px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     font-weight: normal;
+}
+
+/* individual example images */
+
+#run-buddy {
+    background-image: url(../images/run-buddy.png);
+    background-size: cover;
+}
+
+.placeholder-img {
+    background-image: url(../images/placeholder.jpeg);
 }
 
 
@@ -164,8 +188,15 @@ address {
     }
     /* header will unwrap so the title and nav are next to each-other */
 
-    .about p {
-        margin: 0;
+    .about-content .bio {
+        text-align: right;
+        border-right: 2px solid var(--tertiary-color);
+        padding-right: 20px;
+        margin-right: 20px;
+    }
+
+    .about-content .img-container {
+        display: block;
     }
 
     .examples article {
@@ -207,6 +238,6 @@ address {
 
 @media screen and (min-width: 1200px) {
     :root {
-        --img-height: 140px;
+        --img-height: 170px;
     }
 }
