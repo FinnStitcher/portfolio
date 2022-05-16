@@ -23,12 +23,14 @@ body {
     background: rgb(243, 243, 243);
 }
 
-
-/* FONTS */
-
 h1, h2 {
     font-family: 'Exo', sans-serif;
     text-transform: uppercase;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
 }
 
 
@@ -57,11 +59,6 @@ header nav {
     align-items: center;
 }
 
-header a {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
 
 /* MAIN */
 
@@ -81,6 +78,15 @@ main h2 {
     border-bottom: 2px solid;
 }
 
+.about {
+    display: flex; flex-direction: column;
+    align-items: center;
+}
+
+.about h2 {
+    text-align: center;
+}
+
 .about-content {
     display: flex; flex-wrap: wrap;
     max-width: 1000px;
@@ -88,7 +94,6 @@ main h2 {
 
 .about-content div {
     flex: 1 1;
-    height: 200px;
 }
 
 .about-content .bio {
@@ -155,9 +160,8 @@ footer {
 
 footer div {
     display: flex;
-    justify-content: center; align-items: center;
+    justify-content: center; align-items: top;
     flex: 1 1 100vw;
-    height: 40px;
 }
 
 address {
@@ -193,6 +197,7 @@ address {
         border-right: 2px solid var(--tertiary-color);
         padding-right: 20px;
         margin-right: 20px;
+        height: 200px;
     }
 
     .about-content .img-container {
