@@ -127,6 +127,7 @@ main h2 {
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     margin-bottom: 12px;
+    background-size: cover;
 }
 
 .examples article:first-child .img-container {
@@ -167,6 +168,8 @@ main h2 {
 
 #password-generator {
     background-image: url(../images/password-generator.png);
+    background-size: 120%;
+    background-position: top center;
 }
 
 .placeholder-img {
