@@ -127,6 +127,7 @@ main h2 {
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     margin-bottom: 12px;
+    background-size: cover;
 }
 
 .examples article:first-child .img-container {
@@ -152,11 +153,21 @@ main h2 {
     font-weight: normal;
 }
 
+.img-attribution {
+    font-style: italic;
+    font-size: 12px;
+}
+
 /* individual example images */
 
 #run-buddy {
     background-image: url(../images/run-buddy.png);
-    background-size: cover;
+}
+
+#robot-gladiators {
+    background-image: url(../images/robot-fight.jpg);
+    background-position: 30% 10%;
+    background-size: 200%;
 }
 
 .placeholder-img {
