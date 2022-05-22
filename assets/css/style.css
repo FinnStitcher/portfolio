@@ -169,10 +169,19 @@ main h2 {
     background-position: 30% 10%;
     background-size: 200%;
 }
+/* https://www.flickr.com/photos/ariels_photos/4097787955/in/photostream/ */
+
+#password-generator {
+    background-image: url(../images/password-generator.png);
+    background-size: 120%;
+    background-position: top center;
+}
 
 .placeholder-img {
     background-image: url(../images/placeholder.jpeg);
 }
+/* placeholder image is a free stock image provided by pexels.com */
+/* https://www.pexels.com/photo/yellow-bokeh-lights-1669071/ */
 
 
 /* FOOTER */
