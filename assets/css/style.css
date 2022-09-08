@@ -130,7 +130,7 @@ main h2 {
     background-size: cover;
 }
 
-.examples article:first-child .img-container {
+.examples .showpiece .img-container {
     height: calc(var(--img-height) + 50px);
 }
 
@@ -155,21 +155,35 @@ main h2 {
 
 /* individual example images */
 
-#run-buddy {
-    background-image: url(../images/run-buddy.png);
+#lightbox {
+    background-image: url(../images/lightbox.png);
 }
 
-#robot-gladiators {
-    background-image: url(../images/robot-fight.jpg);
-    background-position: 30% 10%;
-    background-size: 200%;
+#note-taker {
+    background-image: url(../images/note-taker.png);
 }
-/* https://www.flickr.com/photos/ariels_photos/4097787955/in/photostream/ */
+
+#deep-thoughts {
+    background-image: url(../images/placeholder.jpeg);
+}
+
+#ecommerce {
+    background-image: url(../images/placeholder.jpeg);
+}
+
+#weather-dashboard {
+    background-image: url(../images/weather-dashboard.png);
+    background-position-y: 20%;
+}
 
 #password-generator {
     background-image: url(../images/password-generator.png);
     background-size: 120%;
     background-position: top center;
+}
+
+#team-profile {
+    background-image: url(../images/team-profile-generator.png);
 }
 
 .placeholder-img {
@@ -236,12 +250,12 @@ address {
         flex: 1 1 40vw;
     }
     
-    .examples article:first-child {
+    .examples .showpiece {
         flex: 2 1 100vw;
     }
     /* work examples wrap into two columns */
 
-    .examples article:last-child {
+    .examples article:last-child:not(.showpiece) {
         flex: 0 1 calc(50% - 20px);
     }
     /* the pixel number here needs to be half the horizontal gap */
